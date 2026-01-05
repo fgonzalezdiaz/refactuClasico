@@ -8,10 +8,22 @@
  $servername = "localhost";
  $username = "root";
  $password = "";
-
- $conn = new mysqli($servername, $username, $password);
+ $dbname = "refactu";
+ $conn = new mysqli($servername, $username, $password, $dbname);
  if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
  }
  echo "Connection succesfull";
+ $sql = "CREATE TABLE facturas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    concepto VARCHAR(200) NOT NULL
+    );"
+ ;
+ $result = $conn->query($sql);
+ if( $result === TRUE) {
+    echo " Table created successfully";
+ } else {
+    echo " Error creating table: " . $conn->error;
+ }
 ?>

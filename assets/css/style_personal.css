@@ -1,0 +1,91 @@
+body {
+    background-image: url('../img/background.webp'); /* Establece imagen de fondo */
+    background-size: cover; /* Cubre todo el area */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fuente principal */
+    margin: 0; /* Sin margenes */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.caja-blanca {
+    background-color: white; /* Fondo blanco */
+    width: 90%; /* Ancho del 90% */
+    max-width: 600px; /* Maximo ancho */
+    
+    padding: 50px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.5); /* Sombra */
+    text-align: center; /* Texto centrado */
+    
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Arriba al 50% */
+    left: 50%; /* Izquierda al 50% */
+    transform: translate(-50%, -50%); /* Centra el elemento */
+    
+    flex-direction: column; /* Direccion vertical */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.caja-transparente {
+    background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semi-transparente */
+    width: 90%; /* Ancho del 90% */
+    max-width: 700px; /* Maximo ancho */
+    padding: 60px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Arriba al 50% */
+    left: 50%; /* Izquierda al 50% */
+    transform: translate(-50%, -50%); /* Centra el elemento */
+    
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Direccion vertical */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.boton {
+    background-color: #3498db; /* Color de fondo azul */
+    color: white; /* Texto blanco */
+    padding: 15px 30px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+    text-decoration: none; /* Sin decoracion */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+    border: none; /* Sin borde */
+    width: 100%; /* Ancho completo */
+    transition: background 0.3s; /* Transicion suave */
+}
+
+.boton:hover {
+    background-color: #2980b9; /* Color de fondo en hover */
+}
+
+.input-simple {
+    padding: 25px; /* Espaciado interno */
+    font-size: 22px; /* Tamaño de fuente */
+    
+    width: 100%; /* Ancho completo */
+    border: 2px solid #ccc; /* Borde gris */
+    border-radius: 10px; /* Bordes redondeados */
+    outline: none; /* Sin contorno */
+    box-sizing: border-box; /* Incluye padding en ancho */
+    background-color: #fcfcfc; /* Fondo gris claro */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+label {
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de fuente */
+    color: #333; /* Color de texto */
+    
+    display: block; /* Muestra como bloque */
+    width: 100%; /* Ancho completo */
+    text-align: left; /* Texto alineado a la izquierda */
+    
+    margin-bottom: 8px; /* Margen inferior */
+    margin-top: 10px; /* Margen superior */
+}

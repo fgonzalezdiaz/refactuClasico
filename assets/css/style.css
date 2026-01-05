@@ -1,3 +1,6 @@
+/* :root - Define variables CSS personalizadas para colores y efectos reutilizables.
+   Uso: Centralizar valores como colores primarios y efectos de vidrio.
+   Función: Facilitar cambios globales y mantener consistencia visual en toda la hoja de estilos. */
 :root {
     --primary-color: #4a90e2; /* Modern Blue */
     --secondary-color: #f5f6fa;
@@ -9,6 +12,9 @@
     --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
+/* * - Selector universal para resetear estilos predeterminados.
+   Uso: Normalizar márgenes, rellenos y modelo de caja en todos los elementos.
+   Función: Evitar inconsistencias en el diseño y asegurar un layout predecible. */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +22,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* body - Estiliza el contenedor principal de la página.
+   Uso: Configurar fondo, altura mínima y layout flexible.
+   Función: Proporcionar una base neutra y estructura para el contenido. */
 body {
     background-color: #f0f2f5;
     min-height: 100vh;
@@ -23,7 +32,9 @@ body {
     flex-direction: column;
 }
 
-/* Header Styles */
+/* header - Estiliza el encabezado de la página.
+   Uso: Crear una barra de navegación superior persistente con efectos modernos.
+   Función: Mantener la navegación visible y atractiva durante el scroll. */
 header {
     background: rgba(255, 255, 255, 0.95);
     padding: 1rem 2rem;
@@ -37,6 +48,9 @@ header {
     backdrop-filter: blur(10px);
 }
 
+/* .brand - Estiliza el enlace de la marca en el header.
+   Uso: Resaltar el nombre o logo del sitio.
+   Función: Actuar como elemento de identidad visual y enlace principal. */
 .brand {
     font-size: 1.5rem;
     font-weight: bold;
@@ -44,12 +58,18 @@ header {
     text-decoration: none;
 }
 
+/* nav ul - Estiliza la lista de navegación.
+   Uso: Organizar enlaces en una fila horizontal.
+   Función: Crear un menú de navegación limpio y espaciado. */
 nav ul {
     display: flex;
     list-style: none;
     gap: 1.5rem;
 }
 
+/* nav a - Estiliza los enlaces de navegación.
+   Uso: Hacer los enlaces interactivos y visualmente atractivos.
+   Función: Proporcionar transiciones suaves y diseño de botón sutil. */
 nav a {
     text-decoration: none;
     color: var(--text-color);
@@ -59,13 +79,18 @@ nav a {
     transition: all 0.3s ease;
 }
 
+/* nav a:hover - Define el efecto al pasar el mouse sobre enlaces de navegación.
+   Uso: Mejorar la usabilidad con retroalimentación visual.
+   Función: Cambiar colores y añadir elevación para indicar interactividad. */
 nav a:hover {
     background-color: var(--primary-color);
     color: var(--text-light);
     transform: translateY(-2px);
 }
 
-/* Hero/Index Styles */
+/* .hero - Estiliza la sección principal (hero).
+   Uso: Crear una sección destacada de bienvenida con fondo de imagen.
+   Función: Centrar contenido y proporcionar un área visual prominente. */
 .hero {
     flex: 1;
     display: flex;
@@ -81,6 +106,9 @@ nav a:hover {
     color: white;
 }
 
+/* .hero::before - Añade una superposición oscura sobre el hero.
+   Uso: Mejorar la legibilidad del texto sobre imágenes.
+   Función: Aplicar un filtro de opacidad para mayor contraste. */
 .hero::before {
     content: '';
     position: absolute;
@@ -92,6 +120,9 @@ nav a:hover {
     z-index: 1;
 }
 
+/* .hero-content - Estiliza el contenedor de contenido en el hero.
+   Uso: Crear un "caja de vidrio" moderna para resaltar contenido.
+   Función: Aplicar efectos de vidrio con desenfoque y sombra. */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -105,18 +136,27 @@ nav a:hover {
     max-width: 600px;
 }
 
+/* .hero h1 - Estiliza el encabezado principal en el hero.
+   Uso: Destacar el título principal de la página.
+   Función: Hacerlo prominente con tamaño grande y sombra de texto. */
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
+/* .hero p - Estiliza el párrafo en el hero.
+   Uso: Proporcionar descripción o subtítulo.
+   Función: Mantener equilibrio visual con opacidad reducida. */
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     opacity: 0.9;
 }
 
+/* .btn-primary - Estiliza botones primarios.
+   Uso: Crear botones llamativos para acciones principales.
+   Función: Aplicar diseño moderno con transiciones y sombras. */
 .btn-primary {
     display: inline-block;
     padding: 1rem 2rem;
@@ -132,6 +172,9 @@ nav a:hover {
     cursor: pointer;
 }
 
+/* .btn-primary:hover - Define el efecto hover para botones primarios.
+   Uso: Mejorar interactividad con cambios visuales.
+   Función: Oscurecer fondo y añadir elevación para sensación de profundidad. */
 .btn-primary:hover {
     background-color: #357abd;
     transform: translateY(-3px);
