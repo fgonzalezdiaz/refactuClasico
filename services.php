@@ -9,16 +9,27 @@
     }
     function insertFactura($nombre, $concepto) {
         if ($concepto == "" || $nombre == "") {
+        return FALSE;
+        }
+
+        $sql = "INSERT INTO facturas (nombre, concepto) VALUES (?, ?)";    
+        $stmt = $GLOBALS['conn']->prepare($sql);
+        if ($stmt === false) {
             return FALSE;
         }
 
-        $sql = "insert into facturas (nombre, concepto) values ('$nombre', '$concepto')";
-        $result = $GLOBALS['conn']->query($sql);
-        return $result;
+        // ss = String (nombre) y String (concepto)
+        $stmt->bind_param("ss", $nombre, $concepto);
+
+        if ($stmt->execute()) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
 
     function eliminarFactura($id){
-        if($id == ""){
+        if($id == "" || !is_numeric($id)){
             return FALSE;
         }
         $sql = "DELETE FROM facturas WHERE id = $id";
@@ -28,5 +39,17 @@
         } else {
             return FALSE; //error, o el ID no existia
         }
+    }
+    function verFacturas(){
+        $sql = 'SELECT * FROM facturas';
+        return $GLOBALS['conn']-> query($sql) ;
+    }
+
+    function verFacturaPorID($id){
+        if($id == "" || !is_numeric($id) || $id < 0) {
+            return FALSE;
+        }
+        $sql = "SELECT * FROM facturas WHERE id = $id";
+        return $GLOBALS['conn']-> query($sql) ;
     }
 ?>

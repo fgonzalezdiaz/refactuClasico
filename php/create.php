@@ -34,10 +34,10 @@
             <?php endif; ?>
             <form action="" method = "POST">
             <label  for="nombre">Nombre:</label>
-            <input class="input-simple"type="text" id="nombre" name="nombre" placeholder="Nombre del cliente">
+            <input maxlength="50" class="input-simple"type="text" id="nombre" name="nombre" placeholder="Nombre del cliente">
 
             <label  for="concepto">Concepto:</label>
-            <input class="input-simple"type="text" id="concepto" name="concepto" placeholder="Introduce el concepto">
+            <input maxlength="50" class="input-simple"type="text" id="concepto" name="concepto" placeholder="Introduce el concepto">
             <button class="boton" style="margin-top: 30px;">Crear Factura</button>
             </form>
         </div>

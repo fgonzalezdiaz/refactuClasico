@@ -23,6 +23,7 @@ body {
     left: 50%; /* Izquierda al 50% */
     transform: translate(-50%, -50%); /* Centra el elemento */
     
+    display: flex;
     flex-direction: column; /* Direccion vertical */
     gap: 20px; /* Espacio entre elementos */
 }
@@ -39,7 +40,7 @@ body {
     left: 50%; /* Izquierda al 50% */
     transform: translate(-50%, -50%); /* Centra el elemento */
     
-    display: flex; /* Usa flexbox */
+    display: flex;
     flex-direction: column; /* Direccion vertical */
     justify-content: center; /* Centra verticalmente */
     align-items: center; /* Centra horizontalmente */
@@ -75,6 +76,16 @@ body {
     box-sizing: border-box; /* Incluye padding en ancho */
     background-color: #fcfcfc; /* Fondo gris claro */
     margin-bottom: 15px; /* Margen inferior */
+}
+
+.scroller-div{
+    max-height: 400px; 
+    
+    overflow-y: scroll; 
+    
+    border: 1px solid #eee; 
+    border-radius: 5px;
+    padding: 5px;
 }
 
 label {

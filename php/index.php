@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-    <?php include 'menu.html';?>
+    <?php include 'menu.html';
+        include '../config/db.php';
+        initDB();
+    ?>
     <head>
     <meta charset="UTF-8">
     <title>RefactuClásico Inicio</title>
