@@ -22,9 +22,9 @@
                 ?>
             </div>
         </div>
-        <div class = 'caja-blanca' style="position: relative; margin-bottom: 10%; " >
+        <div class = 'caja-blanca' style="position: relative; " >
             <form action="verFactura.php">
-                <button class="boton" style="margin-top: 30px;">Buscar por ID</button>
+                <button class="boton" style="margin-top: 10px;">Buscar por ID</button>
             </form>
         </div>
         </div>
